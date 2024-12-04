@@ -23,6 +23,9 @@ steps:
   env:
   - 'BRANCH_NAME=$BRANCH_NAME'
   - 'PROJECT_ID=$PROJECT_ID'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
 #Execute deploy.sh with image tag provided by docker build step
 #- name: 'gcr.io/cloud-builders/curl'
 #  script: |
