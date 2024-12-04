@@ -2,11 +2,7 @@
 
 import * as React from "react"
 import {
-  Bot,
-  Frame,
   GalleryVerticalEnd,
-  Map,
-  PieChart,
   SquareTerminal,
 } from "lucide-react"
 
@@ -38,47 +34,27 @@ const data = {
   navMain: [
     {
       title: "Simulaciones",
-      url: "#",
+      url: "#/main",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
           title: "Asistente de banca",
-          url: "/dashboard",
+          url: "/",
         }
       ],
     },
     {
       title: "Feedback",
-      url: "#",
-      icon: Bot,
+      url: "/feedback",
+      icon: SquareTerminal,
+      isActive: true,
       items: [
         {
           title: "Feedback",
-          url: "#",
-        },
-        {
-          title: "Calificaciones",
-          url: "#",
-        },
+          url: "/feedback",
+        }
       ],
-    }
-  ],
-  projects: [
-    {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
-    },
-    {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: PieChart,
-    },
-    {
-      name: "Travel",
-      url: "#",
-      icon: Map,
     },
   ],
 }

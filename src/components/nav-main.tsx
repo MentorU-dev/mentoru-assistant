@@ -17,6 +17,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
+import { Link } from "@tanstack/react-router"
 
 export function NavMain({
   items,
@@ -63,9 +64,9 @@ export function NavMain({
                       <SidebarMenuSubButton className={`${subItem.title === "Feedback" ||
                         subItem.title === "Calificaciones" ? "text-muted-foreground/70 hover:text-muted-foreground/70 cursor-default" : ""
                         }`} asChild>
-                        <a className={`${subItem.title === "Feedback" || subItem.title === "Calificaciones" ? "text-muted-foreground/70" : ""}`} href={subItem.url}>
+                        <Link className={`${subItem.title === "Feedback" || subItem.title === "Calificaciones" ? "text-muted-foreground/70" : ""}`} to={subItem.url}>
                           <span>{subItem.title}</span>
-                        </a>
+                        </Link>
                       </SidebarMenuSubButton>
                     </SidebarMenuSubItem>
                   ))}
