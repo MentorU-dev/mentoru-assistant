@@ -8,7 +8,7 @@ import {
 
 import { NavMain } from "./nav-main"
 import { NavUser } from "./nav-user"
-import { TeamSwitcher } from "./team-switcher"
+import { LogoSidebar } from "./team-switcher"
 import {
   Sidebar,
   SidebarContent,
@@ -44,18 +44,6 @@ const data = {
         }
       ],
     },
-    {
-      title: "Feedback",
-      url: "/feedback",
-      icon: SquareTerminal,
-      isActive: true,
-      items: [
-        {
-          title: "Feedback",
-          url: "/feedback",
-        }
-      ],
-    },
   ],
 }
 
@@ -76,9 +64,9 @@ export function AppSidebar({
   }
 
   return (
-    <Sidebar variant="inset" collapsible="icon" {...props}>
+    <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <TeamSwitcher teams={data.teams} />
+        <LogoSidebar />
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />

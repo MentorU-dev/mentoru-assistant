@@ -7,7 +7,7 @@
 
 set -o xtrace
 
-export $(grep -v '^#' dev.env_deploy | xargs)
+export $(grep -v '^#' $BRANCH_NAME.env_deploy | xargs)
 
 gcloud storage buckets create $DESTINATION_BUCKET --location $REGION
 gsutil -m rm -rf $DESTINATION_BUCKET/*

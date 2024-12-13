@@ -9,11 +9,14 @@ steps:
   script: |
     #!/usr/bin/env bash
     set -o xtrace
+    cp $BRANCH_NAME.env .env.production
+    echo $_FIREBASE_KEY >> .env.production
     npm install;
     npm run build;
   env:
   - 'BRANCH_NAME=$BRANCH_NAME'
   - 'PROJECT_ID=$PROJECT_ID'
+  - '_FIREBASE_KEY=$_FIREBASE_KEY'
 #Execute deploy.sh with image tag provided by docker build step
 - name: 'gcr.io/cloud-builders/gcloud'
   script: |
